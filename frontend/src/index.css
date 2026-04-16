@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --app-background: #f6fbff;
+  --app-text: #0f172a;
+  --app-line: rgba(14, 165, 233, 0.12);
+}
+
+@layer base {
+  * {
+    @apply border-app-line;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-app-bg font-body text-slate-900 antialiased;
+    background-color: var(--app-background);
+    color: var(--app-text);
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  ::selection {
+    background: rgba(56, 189, 248, 0.22);
+    color: #0f172a;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Sora', sans-serif;
+  }
+}
